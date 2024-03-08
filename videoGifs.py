@@ -109,7 +109,3 @@ video = get_Video()
 createGifs(video)
 
 
-# [done] properly use logging
-# [done] check for timestamp duplicates
-# [done] resizing: edited Lib\site-packages\moviepy\video\fx\resize.py, line 37: Image.Antialias (deprecated) -> Image.Resampling.LANCZOS 
-
