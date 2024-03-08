@@ -24,7 +24,7 @@ def get_timestamps():
     timestamps = []
     timestamps_duplicates = []
     try:
-        with open(f'./{args.timestamps}', 'r') as file:
+        with open(f'{args.timestamps}', 'r') as file:
             csvreader = csv.reader(file)
             #skip headers
             next(csvreader, None)
@@ -55,7 +55,7 @@ def get_timestamps():
 def get_Video():
     try: 
         #scale video if arg is provided
-        video = VideoFileClip(f'./{args.video}').resize(args.output_scale) if args.output_scale else VideoFileClip(f'./{args.video}')
+        video = VideoFileClip(f'{args.video}').resize(args.output_scale) if args.output_scale else VideoFileClip(f'{args.video}')
         return video
         
     except OSError:
@@ -81,7 +81,7 @@ def createDir(video_name):
 
 def createGifs(video):
     #remove the .mp4 for naming files
-    video_name = args.video.split('.')[0]
+    video_name = args.video.split('\\')[-1].split('.')[0]   # This needs to be worked on.
     timestamps = get_timestamps()
     gifs_dir = createDir(video_name)
 

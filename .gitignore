@@ -1,3 +1,5 @@
 venv/
-untouchable.mp4
-timestamps.csv
+*.mp4
+*.csv
+*.lock
+*.toml
